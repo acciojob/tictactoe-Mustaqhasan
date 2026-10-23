@@ -1,5 +1,3 @@
-//your JS code here. If required.
-
 let display = "";
 function assignUser() {
   let player_1 = document.getElementById("player-1").value;
@@ -9,7 +7,7 @@ function assignUser() {
   element.style.display = "none";
   let game_ele = document.getElementById("game_display");
   game_ele.style.display = "block";
-  let player_name = document.getElementsByClassName("message");
+  let player_name = document.getElementById("message");
   player_name.innerText = `${display} you'r up!`;
 }
 
@@ -31,7 +29,7 @@ cells.forEach((cell) => {
   cell.addEventListener("click", () => {
     let player_1 = document.getElementById("player-1").value;
     let player_2 = document.getElementById("player-2").value;
-    let player_name = document.getElementsByClassName("message");
+    let player_name = document.getElementById("message");
     display = display == player_1 ? player_2 : player_1;
     player_name.innerText = `${display} you'r up!`;
     if (cell.innerText !== "") return;
@@ -54,11 +52,12 @@ cells.forEach((cell) => {
     if (winner) {
       display = turn === "X" ? player_1 : player_2;
       console.log(display + " wins!");
-      let player_name = document.getElementsByClassName("message");
+      let player_name = document.getElementById("message");
       player_name.innerText = `${display} , congratulations you won!`;
       return;
     }
     turn = turn === "X" ? "O" : "X";
   });
 });
+
 
