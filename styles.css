@@ -1,1 +1,41 @@
 /*  your css code here. If applicable */
+#container{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#container input{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#container button{
+    padding: 10px;
+    width: 200px;
+}
+
+.board{
+     height: 400px;
+    width: 400px;
+    background-color: antiquewhite;
+    /* margin: auto; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.board div{
+    /* width: 30%; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_display{
+height: 400px;
+    width: 400px;
+    margin: auto;
+    display:none;
+}
